@@ -1,0 +1,6 @@
+module.exports = {
+    help: 'Ping, Pong',
+    func: (client, msg, args, guild) => {
+        msg.channel.sendMessage("pong");
+    }
+};
