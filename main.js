@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const Client = new Discord.Client();
+const config = require('./config');
 
 Client.once('ready', () => {
     console.time('loading');
