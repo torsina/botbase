@@ -1,6 +1,9 @@
-module.exports = {
+module.exports = { //this is the base of every command
     help: 'Ping, Pong',
     func: (client, msg, args, guild) => {
+        //client = Client
+        //msg = message
+        //guild = message.guild or msg.guild
         msg.channel.sendMessage("pong");
     }
 };
