@@ -2,11 +2,12 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const Client = new Discord.Client();
 const config = require('./config');
-
+Client.login(config.token).catch(console.error);
 Client.once('ready', () => {
     console.time('loading');
     Client.load();
-    Client.user.setGame('type $help'); //set the "playing" thing bellow your username
+    Client.user.setGame('type '+config.prefix+'help');
+    //Client.user.setStatus('invisible');//set the "playing" thing bellow your username
     console.timeEnd('loading'); //will give in the console the time the bot needed to launch, can be usefull for optimization
     console.log('I am ready!'); //loading is finished
 });
